@@ -42,14 +42,14 @@ are registering. For a ``Command.Parameterized``, a command registration may loo
 		event.register(this.pluginContainer, this.yourCommand, "commandAlias1", "commandAlias2");
 	}
 
-Sponge commands may not be unregistered.
+Sponge commands may not be unregistered right now, however work is ongoing to re-enable this in the future.
 
 Providing Your Own Command Framework
 ====================================
 
 If you wish to provide your own framework for other plugins to use, you may do so by implementing 
-:javadoc:`CommandRegistrar`. :doc:`commandregistrars<Learn more about how to implement and register your own 
-CommandRegistrar here>`.
+:javadoc:`CommandRegistrar`. 
+:doc:`Learn more about how to implement and register your own CommandRegistrar here<commandregistrars>`.
 
 Invoking a Command
 ~~~~~~~~~~~~~~~~~~
