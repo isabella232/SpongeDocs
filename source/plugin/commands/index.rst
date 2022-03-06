@@ -3,21 +3,21 @@ Commands
 ========
 
 .. javadoc-import::
-	org.spongepowered.api.Cause
-	org.spongepowered.api.command.Command
-	org.spongepowered.api.command.Command.Parameterized
-	org.spongepowered.api.command.Command.Raw
-	org.spongepowered.api.command.CommandCause
+    org.spongepowered.api.Cause
+    org.spongepowered.api.command.Command
+    org.spongepowered.api.command.Command.Parameterized
+    org.spongepowered.api.command.Command.Raw
+    org.spongepowered.api.command.CommandCause
     org.spongepowered.api.command.CommandManager
-	org.spongepowered.api.command.registrar.CommandRegistrar
-	org.spongepowered.api.event.lifecycle.RegisterCommandEvent
+    org.spongepowered.api.command.registrar.CommandRegistrar
+    org.spongepowered.api.event.lifecycle.RegisterCommandEvent
 
 The Command API in Sponge is a powerful system that supports the client completion GUI in modern versions of Minecraft,
 while providing a flexible, easy to use API.
 
 .. note::
 
-	SpongeAPI does not have a dependency on Brigadier, Mojang's command library.
+    SpongeAPI does not have a dependency on Brigadier, Mojang's command library.
 
 Creating a Command
 ~~~~~~~~~~~~~~~~~~
@@ -37,13 +37,13 @@ are registering. For a ``Command.Parameterized``, a command registration may loo
 
 .. code-block:: java
 
-	private final PluginContainer pluginContainer = ...;
-	private final Command.Parameterized yourCommand = Command.builder()....build();
-
+    private final PluginContainer pluginContainer = ...;
+    private final Command.Parameterized yourCommand = Command.builder()....build();
+    
 	@Listener
-	public void registerCommands(final RegisterCommandEvent<Command.Parameterized> event) {
-		event.register(this.pluginContainer, this.yourCommand, "commandAlias1", "commandAlias2");
-	}
+    public void registerCommands(final RegisterCommandEvent<Command.Parameterized> event) {
+    	event.register(this.pluginContainer, this.yourCommand, "commandAlias1", "commandAlias2");
+    }
 
 Sponge commands may not be unregistered right now, however work is ongoing to re-enable this in the future.
 
