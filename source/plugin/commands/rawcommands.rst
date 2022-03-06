@@ -4,6 +4,7 @@ Writing Raw Commands
 
 .. javadoc-import::
     net.kyori.adventure.text.Component
+    org.spongepowered.api.command.Command
 	org.spongepowered.api.command.Command.Raw
     org.spongepowered.api.command.Command.Parameterized
     org.spongepowered.api.command.CommandCause
