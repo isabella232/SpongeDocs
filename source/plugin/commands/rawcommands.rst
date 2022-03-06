@@ -12,12 +12,13 @@ Writing Raw Commands
     org.spongepowered.api.command.parameter.ArgumentReader.Mutable
     org.spongepowered.api.command.registrar.tree.CommandTreeNode.Root
     org.spongepowered.api.command.registrar.tree.CommandTreeNodeTypes
+    org.spongepowered.api.event.lifecycle.RegisterCommandEvent
 
 
 .. note::
     
     While Sponge provides the ability for you to control the string parsing yourself, it is recommended that you use
-    :doc:`parameterized/index <the parameterized commands instead>`, so that client completions are supported with
+    :doc:`the parameterized commands instead <parameterized/index>`, so that client completions are supported with
     minimal effort from you.
     
 A raw command, also referred to as a *low level command*, is a command that provides developers full control over how

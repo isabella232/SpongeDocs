@@ -26,9 +26,9 @@ Sponge API natively provides two ways to write commands:
 
 - The preferred way is to use :javadoc:`Command#builder()` to create :javadoc:`Command.Parameterized` s. These take full
   advantage of the rich API, including first class support for client completions. This method is broadly similar to 
-  ``CommandSpecs`` in SpongeAPI 7. :doc:`parameterized/index<Learn more about parameterized commands here.`
+  ``CommandSpecs`` in SpongeAPI 7. :doc:`Learn more about parameterized commands here.<parameterized/index>`
 - You can also implement :javadoc:`Command.Raw` directly, similar to ``CommandCallable`` in SpongeAPI 7, though we do not
-  recommend this over parameterized commands. :doc:`parameterized/index<Learn more about raw commands here.`
+  recommend this over parameterized commands. :doc:`Learn more about raw commands here.<parameterized/index>`
 
 Commands are registered at the appropriate point during the Sponge lifecycle event :javadoc:`RegisterCommandEvent`,
 where the generic represents the type of command to register. For each command you wish to register, simply call
