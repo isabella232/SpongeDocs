@@ -68,6 +68,7 @@ the type of this source. In SpongeAPI 8, plugins should instead inspect the root
 :javadoc:`CommandCause#root()` and perform a type check on the returned object, like so:
 
 .. code-block:: java
+    
     org.spongepowered.api.command.CommandCause
     org.spongepowered.api.entity.living.player.server.ServerPlayer
 

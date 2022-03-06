@@ -5,8 +5,11 @@ Commands
 .. javadoc-import::
 	org.spongepowered.api.Cause
 	org.spongepowered.api.command.Command
+	org.spongepowered.api.command.Command.Parameterized
+	org.spongepowered.api.command.Command.Raw
 	org.spongepowered.api.command.CommandCause
     org.spongepowered.api.command.CommandManager
+	org.spongepowered.api.command.registrar.CommandRegistrar
 	org.spongepowered.api.event.lifecycle.RegisterCommandEvent
 
 The Command API in Sponge is a powerful system that supports the client completion GUI in modern versions of Minecraft,
@@ -21,7 +24,7 @@ Creating a Command
 
 Sponge API natively provides two ways to write commands:
 
-- The preferred way is to use :javadoc:`Command#builder()` to create :javadoc:`Command.Parameterized`s. These take full
+- The preferred way is to use :javadoc:`Command#builder()` to create :javadoc:`Command.Parameterized` s. These take full
   advantage of the rich API, including first class support for client completions. This method is broadly similar to 
   ``CommandSpecs`` in SpongeAPI 7. :doc:`parameterized/index<Learn more about parameterized commands here.`
 - You can also implement :javadoc:`Command.Raw` directly, similar to ``CommandCallable`` in SpongeAPI 7, though we do not
@@ -48,21 +51,21 @@ Providing Your Own Command Framework
 ====================================
 
 If you wish to provide your own framework for other plugins to use, you may do so by implementing 
-:javadoc:`CommandRegistrar`. 
+:javadoc:`CommandRegistrar` . 
 :doc:`Learn more about how to implement and register your own CommandRegistrar here<commandregistrars>`.
 
 Invoking a Command
 ~~~~~~~~~~~~~~~~~~
 
-.. warn::
-
+.. warning::
+    
     While there are legitimate reasons as to why you may invoke a command, think carefully about whether you need to do
     so. If you are executing a command to perform a specific task that you could do via using the APIs, you should use
     the APIs instead.
-
+    
     If you are calling a command because you cannot find the API you need, or it hasn't been implemented yet, talk to the
     Sponge team - it is generally better to ask for the APIs you need than try to work around it by calling other 
-	commands.
+    commands.
 
 Commands in Sponge can be called by calling :javadoc:`CommandManager#process(String)`, supplying the command that you want
 to call **without** the first forward slash (``/``). The :javadoc:`CommandCause` of the command will be generated from the
